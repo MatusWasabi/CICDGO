@@ -13,6 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Try Simple UAT
+        run: |
+          # Path to your Unreal Engine installation
+          UE_PATH="D:\Epic Games\UE_5.3"
+
+          # Path to your Unreal project file
+          PROJECT_PATH="D:\Game Development\Unreal Projects\CICDGO\CICDGO.uproject"
+
+          # Path to where you want to store the packaged game
+          OUTPUT_PATH="D:\Game Development"
+
+          # Try to run empty UAT to check for correct path
+          "$UE_PATH\Engine\Build\BatchFiles\RunUAT.bat"
+
       - name: Run Packaging Script
         run: |
           # Path to your Unreal Engine installation
