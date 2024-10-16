@@ -25,4 +25,4 @@ jobs:
           OUTPUT_PATH="D:\Game Development"
 
           # Run the packaging command
-          & "$UE_PATH\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -project="$PROJECT_PATH" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -cook -allmaps -build -stage -pak -archive -archivedirectory="$OUTPUT_PATH"
+          "$UE_PATH\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -project="$PROJECT_PATH" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -cook -allmaps -build -stage -pak -archive -archivedirectory="$OUTPUT_PATH"
